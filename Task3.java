@@ -3,12 +3,10 @@ import java.util.Scanner;
 class BankAccount {
     private double balance;
 
-    // Constructor to initialize the bank account with an initial balance
     public BankAccount(double initialBalance) {
         this.balance = initialBalance;
     }
 
-    // Method to deposit money into the account
     public void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
@@ -18,7 +16,7 @@ class BankAccount {
         }
     }
 
-    // Method to withdraw money from the account
+   
     public void withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
@@ -30,7 +28,6 @@ class BankAccount {
         }
     }
 
-    // Method to check the current balance
     public void checkBalance() {
         System.out.printf("Current balance: $%.2f%n", balance);
     }
@@ -39,9 +36,8 @@ class BankAccount {
 public class ATM {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        BankAccount account = new BankAccount(1000); // Initial balance
+        BankAccount account = new BankAccount(1000); 
 
-        // Display ATM menu and handle user choices
         while (true) {
             System.out.println("\nWelcome to the ATM");
             System.out.println("1. Check Balance");
